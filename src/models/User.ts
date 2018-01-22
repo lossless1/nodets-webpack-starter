@@ -5,7 +5,7 @@ export interface Images {
     url: string;
 }
 
-export interface IArticle {
+export interface IUser {
     title: string;
     author: string;
     description: string;
@@ -13,6 +13,6 @@ export interface IArticle {
     modified: Date;
 }
 
-export interface IArticleModel extends IArticle, Document {
+export interface IUserModel extends IUser, Document {
 
 }

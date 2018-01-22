@@ -9,10 +9,10 @@ import * as root from 'app-root-path';
 import * as cookieParser from 'cookie-parser';
 import * as errorHandler from "errorhandler";
 import log from "./libs/winston.error";
-
+import * as crypto from 'crypto';
 
 import { ArticleModel } from './libs/mongoose';
-import { Article } from './models/Article';
+import { IArticle } from './models/Article';
 // view engine setup
 
 export class Server {
@@ -43,7 +43,7 @@ export class Server {
     public api() {
 
         this.app.get('/api', function (req, res) {
-            res.send('API is running');
+            res.send({ crypto: crypto.createHmac('sha1', '123').update('password').digest('hex') });
         });
 
         //empty for now
@@ -196,7 +196,6 @@ export class Server {
 
         //ErrorRoute
         ErrorRoute.create(router);
-
 
         //use router middleware
         this.app.use(router);
