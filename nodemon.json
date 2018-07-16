@@ -1,0 +1,16 @@
+{
+    "verbose": true,
+    "ignore": ["*.test.js", "fixtures/*", "**/*.spec.ts"],
+    "execMap": {
+        "echo": "1",
+        "ts": "./node_modules/.bin/ts-node bin/www.ts",
+        "rb": "ruby",
+        "pde": "processing --sketch={{pwd}} --run"
+    },
+    "watch": [
+        "**/*"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    }
+}

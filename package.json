@@ -7,11 +7,19 @@
     "test": "tests"
   },
   "scripts": {
-    "server:dev:nodemon": "NODE_ENV=development nodemon --watch '**/*.ts' --ignore '**/*.spec.ts' --exec 'ts-node' bin/www.ts",
+    "server:dev:nodemon": "./node_modules/.bin/nodemon bin/www.ts",
     "build": "ts-node node_modules/webpack/bin/webpack.js --config config/webpack.config.ts",
     "compiled": "ts-node build/compiled",
     "clean": "rimraf build",
     "start": "yarn run server:dev:nodemon"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "delay": "2500",
+    "NODE_ENV": "development"
   },
   "main": "",
   "keywords": [
@@ -63,7 +71,7 @@
     "@types/nconf": "^0.0.36",
     "@types/oauth2orize": "^1.8.3",
     "@types/winston": "^2.3.7",
-    "nodemon": "^1.14.10",
+    "nodemon": "^1.18.2",
     "ts-loader": "^2.0.2",
     "ts-node": "^4.1.0",
     "typescript": "^2.2.1",

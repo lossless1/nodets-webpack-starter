@@ -1,6 +1,6 @@
 import { ErrorRoute } from './routes/error';
 import { Application, Request, Router, Response, NextFunction } from 'express';
-import { IndexRoute } from './routes/index';
+import { IndexRoute } from './routes';
 import * as express from 'express';
 import * as path from 'path';
 import * as logger from 'morgan';
