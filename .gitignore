@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .vscode/
 build/
 typings/
@@ -6,3 +7,12 @@ node_modules/
 ._.*
 .idea/
 yarn.lock
+#Build folder
+build/
+
+#Modules folder
+node_modules/
+
+#Logs files
+yarn-error.log
+

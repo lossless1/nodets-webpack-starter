@@ -1,0 +1,14 @@
+{
+    "port": 1337,
+    "security": {
+        "tokenLife": 3600
+    },
+    "mongodb": {
+        "protocol":"mongodb",
+        "host":"localhost",
+        "port":"27017",
+        "user":"name",
+        "db":"test",
+        "uri": "mongodb://localhost:27017/test"
+    }
+}

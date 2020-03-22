@@ -1,6 +1,6 @@
-import { IRefreshTokenModel } from './../models/RefreshToken';
-import { IAccessTokenModel, IAccessToken } from './../models/AccessToken';
-import { IArticle } from './../models/Article';
+import { IRefreshTokenModel } from '../models/RefreshToken';
+import { IAccessTokenModel, IAccessToken } from '../models/AccessToken';
+import { IArticle } from '../models/Article';
 import * as mongoose from 'mongoose';
 import log from './winston.error';
 import { nconf } from './config';
@@ -9,7 +9,7 @@ import { Document, Schema, model } from 'mongoose';
 import { IClientModel } from '../models/Client';
 import { IUserModel } from '../models/User';
 
-mongoose.connect(nconf.get('mongoose:uri'));
+mongoose.connect(nconf.get('mongodb:uri'), { useNewUrlParser: true });
 
 let db = mongoose.connection;
 
@@ -147,5 +147,4 @@ let RefreshToken: Schema = new Schema({
 });
 
 let RefreshTokenModel= model<IRefreshTokenModel>('RefreshToken', RefreshToken);
-
 export { ArticleModel, UserModel, Client, ClientModel, RefreshTokenModel, AccessTokenModel };

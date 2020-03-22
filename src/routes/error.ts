@@ -1,5 +1,5 @@
 import { Response, Request, Router, NextFunction } from 'express';
-import { BaseRoute } from "./route";
+import { BaseRoute } from "./base";
 
 export class ErrorRoute extends BaseRoute {
     constructor() {
@@ -17,7 +17,7 @@ export class ErrorRoute extends BaseRoute {
         this.title = "Error | Template";
         
         let options: Object = {
-            "message": "Error 404"
+            message: "Error 404"
         }
         this.render(req, res, "error", options);
     }
