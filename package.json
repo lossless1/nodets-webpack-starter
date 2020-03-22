@@ -50,7 +50,7 @@
     "method-override": "^2.3.10",
     "mongodb": "^3.0.1",
     "mongoose": "^5.0.0",
-    "morgan": "^1.7.0",
+    "morgan": "^1.9.1",
     "nconf": "^0.10.0",
     "node": "^9.3.0",
     "oauth2orize": "^1.11.0",
